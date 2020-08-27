@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+// services
 import HttpService from '../services/http-service';
+// components
 import Product from '../product/product';
+import WishList from '../wishlist/wishlist';
 
 const http = new HttpService();
 class App extends Component {
@@ -49,10 +52,17 @@ class App extends Component {
             Learn React
         </a>
         </header>
-        <div className='App-main'>
+        <div className='container-fluid App-main'>
           <div className='row'>
-            
-            {this.productList()}
+            <div className="col-sm-8">
+              <div className="row">
+                {this.productList()}
+              </div>
+              
+            </div>
+            <div className="col-sm-4">
+              <WishList/>
+            </div>
           </div>
           
         </div>
