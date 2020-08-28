@@ -1,9 +1,10 @@
-import React, {
-    Component
-} from 'react';
+import React, {Component} from 'react';
 import './product-condensed.css';
+
+import NotificationService from '../services/notification-service';
 import DataService from '../services/data-service';
 
+let ns = new NotificationService();
 let ds = new DataService();
 class ProductCondensed extends Component {
     constructor(props) {

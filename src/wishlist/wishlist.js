@@ -6,6 +6,7 @@ import ProductCondensed from '../product-condensed/product-condensed';
 import DataService from '../services/data-service';
 import NotificationService, {NOTIF_WHISHLIST_CHANGED} from '../services/notification-service';
 let ns = new NotificationService();
+let ds = new DataService();
 class WishList extends Component {
     constructor(props) {
         super(props);
